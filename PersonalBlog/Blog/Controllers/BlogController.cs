@@ -2,7 +2,7 @@
 
 namespace Blog.Controllers
 {
-    public class BlogContoller:Controller
+    public class BlogController : Controller
     {
         public IActionResult CreatorPage()
         {
