@@ -8,8 +8,17 @@
 <script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
 
 
-<div id="example">
+<div>
+
+    <form action="CreatorPage" method="Post">
+        <textarea name="content" id="myEditor"></textarea>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+
+
     <script>
-        var editor = new FroalaEditor('#example');
+        var editor = new FroalaEditor('#myEditor',{
+            toolbarButtons: [['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript'], ['fontFamily', 'fontSize', 'textColor', 'backgroundColor'], ['inlineClass', 'inlineStyle', 'clearFormatting']]
+        });
     </script>
 </div>
