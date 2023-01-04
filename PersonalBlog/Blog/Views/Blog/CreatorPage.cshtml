@@ -1,16 +1,22 @@
 ﻿@using Blog.Models
 @model BlogEntry
 
+
+@{
+    ViewData["Title"] = "Create Post";
+}
+
 <link href="~/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="~/js/froala_editor.pkgd.min.js"></script>
 
+<h5 class="mb-4">Create Post</h5>
 
 <div>
 
     <form action="CreatorPage" method="Post">
-        <input asp-for=Id />
+        <input hidden asp-for=Id />
         <textarea asp-for=Content id="myEditor"></textarea>
-        <button type="submit" class="btn btn-secondary">Submit</button>
+        <button type="submit" class="btn btn-secondary mt-4">Submit</button>
     </form>
 
 

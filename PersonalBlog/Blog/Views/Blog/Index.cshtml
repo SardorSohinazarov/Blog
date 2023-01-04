@@ -1,17 +1,24 @@
 ﻿@using Blog.Models
 @model List<BlogEntry>
 
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<h2>Posts</h2>
+<hr />
+
 
 
 <div>
     @foreach(BlogEntry post in @Model){
-        <div class="card mb-2">
+        <div class="card mb-4">
             <div class="card-body">
                 @Html.Raw(@post.Content)
             </div>
 
             <div class="card-footer">
-                @Html.ActionLink("Edit","CreatorPage", new {Id = @post.Id})
+                @Html.ActionLink("Edit","CreatorPage", new {Id = @post.Id},new {@class="btn btn-sm btn-secondary"})
             </div>
         </div>
     }
