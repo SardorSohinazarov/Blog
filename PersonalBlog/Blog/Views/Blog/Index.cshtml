@@ -9,6 +9,10 @@
             <div class="card-body">
                 @Html.Raw(@post.Content)
             </div>
+
+            <div class="card-footer">
+                @Html.ActionLink("Edit","CreatorPage", new {Id = @post.Id})
+            </div>
         </div>
     }
 </div>
