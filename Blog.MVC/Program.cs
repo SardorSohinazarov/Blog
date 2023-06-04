@@ -1,6 +1,10 @@
+using Blog.MVC.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IPostRepository, MockPostRepository>();
 
 var app = builder.Build();
 

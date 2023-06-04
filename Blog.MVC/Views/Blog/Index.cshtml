@@ -1,0 +1,58 @@
+﻿@using Blog.MVC.ViewModels
+@model BlogPostsViewModel
+
+@{
+
+}
+
+<h1>Posts</h1>
+<hr />
+
+<div>
+    <ul class="list-group list-group-flush">
+        @foreach (Post post in Model.Posts)
+        {
+            <li class="list-group-item list-group-item-action border-bottom py-4">
+                <div class="li-text">
+                    @post.CreatedDate 
+
+                    <br />
+                    <h5>
+                        @post.Title
+                    </h5>
+                </div>
+
+                <img class="li-button my-3" style="width:20px; height:20px;" src="images/right-arrow.png" />
+
+            </li>
+        }
+    </ul>
+</div>
+
+<style>
+    .list-group-item {
+        position: relative;
+        border-style: solid;
+        transition: box-shadow 0.3s;
+    }
+
+    /*hover qilinganda strelka ko'rinadi*/
+    .list-group-item:hover .li-button {
+        opacity: 1;
+    }
+
+    .list-group-item:hover{
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .li-text{
+        float: left;
+    }
+
+    .li-button {
+        float: right;
+        font-size: 24px;
+        opacity: 0.0;
+        transition: opacity 0.5s;
+    }
+</style>
