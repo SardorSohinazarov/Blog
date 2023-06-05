@@ -18,9 +18,11 @@
             };
         }
 
-        public void Create(Post post)
+        public Post Create(Post post)
         {
+            post.Id = _posts.Count + 1;
             _posts.Add(post);
+            return post;
         }
 
         public Post Delete(int id)

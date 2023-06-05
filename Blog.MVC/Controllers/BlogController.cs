@@ -36,5 +36,12 @@ namespace Blog.MVC.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult CreatePost(Post post)
+        {
+            var newPost = _postRepository.Create(post);
+            return RedirectToAction("posts", new { id = newPost.Id });
+        }
     }
 }

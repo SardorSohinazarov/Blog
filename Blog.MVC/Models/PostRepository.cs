@@ -26,5 +26,10 @@
         {
             throw new NotImplementedException();
         }
+
+        Post IPostRepository.Create(Post post)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
