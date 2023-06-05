@@ -1,11 +1,7 @@
 ﻿@using Blog.MVC.ViewModels
-@model BlogPostsViewModel
+@model BlogIndexViewModel
 
-@{
-
-}
-
-<h1>Posts</h1>
+<h1 class="text-center">Posts</h1>
 <hr />
 
 <div>
@@ -13,17 +9,18 @@
         @foreach (Post post in Model.Posts)
         {
             <li class="list-group-item list-group-item-action border-bottom py-4">
-                <div class="li-text">
-                    @post.CreatedDate 
+                <a asp-controller="Blog" asp-action="Posts" asp-route-Id="@post.Id"> 
+                    <div class="li-text">
+                        @post.CreatedDate 
 
-                    <br />
-                    <h5>
-                        @post.Title
-                    </h5>
-                </div>
+                        <br />
+                        <h5>
+                            @post.Title
+                        </h5>
+                    </div>
 
-                <img class="li-button my-3" style="width:20px; height:20px;" src="images/right-arrow.png" />
-
+                    <img class="li-button my-3" style="width:20px; height:20px;" src="images/right-arrow.png" />
+                    </a>    
             </li>
         }
     </ul>

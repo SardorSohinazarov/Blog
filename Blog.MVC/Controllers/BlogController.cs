@@ -15,12 +15,21 @@ namespace Blog.MVC.Controllers
 
         public IActionResult Index() 
         {
-            BlogPostsViewModel blogPostsViewModel = new BlogPostsViewModel()
+            BlogIndexViewModel blogPostsViewModel = new BlogIndexViewModel()
             {
                 Posts = _postRepository.Get()
             };
 
             return View(blogPostsViewModel);
+        }
+
+        public IActionResult Posts(int? id)
+        {
+            BlogPostViewModel blogPostViewModel = new BlogPostViewModel()
+            {
+                Post = _postRepository.Get(id ?? 1)
+            };
+            return View(blogPostViewModel);
         }
     }
 }

@@ -9,5 +9,6 @@
         public string AuthorUrl { get; set; } = "https://www.linkedin.com/in/sardorsohinazarov/";
         public string Content { get; set; }
         public string CreatedDate { get; set; } = DateTime.Now.ToString("dd MMMM, yyyy");
+        public int Views { get; set; }
     }
 }

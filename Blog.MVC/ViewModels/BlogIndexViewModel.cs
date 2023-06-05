@@ -2,7 +2,7 @@
 
 namespace Blog.MVC.ViewModels
 {
-    public class BlogPostsViewModel
+    public class BlogIndexViewModel
     {
         public List<Post> Posts { get; set; }
     }
