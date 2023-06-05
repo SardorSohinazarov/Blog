@@ -1,8 +1,45 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<div class="background-image"></div>
+<div class="container">
+        <!-- Rest of your HTML content goes here -->
+    <div class="container bacg_img">
+        <div class="hero-text">
+            <h3>Hi, There!</h3>
+            <hi>I am <snap>Sardor Sohinazarov</snap></hi>
+            <p>Ha men o'sha daxshat .net dasturchiman aniq</p>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+            <div class="social">
+                <a href="#"><i class=""></i>Git</a>
+                <a href="#"><i class=""></i>Linkiden</a>
+                <a href="#"><i class=""></i>Yana</a>
+                <a href="#"><i class=""></i>Yana</a>
+                <a href="#"><i class=""></i>Yana</a>
+            </div>
+
+            <button type="button">
+                More About Me
+            </button>
+        </div>
+    </div>
 </div>
+
+<style>
+    .container .hero-text{
+        margin-bottom: 40px;
+    }
+
+    span{
+        color: dodgerblue;
+    }
+
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("~/wwwroot/images/men.jpg");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+</style>

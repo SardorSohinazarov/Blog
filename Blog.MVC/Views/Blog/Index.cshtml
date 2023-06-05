@@ -1,6 +1,8 @@
 ﻿@using Blog.MVC.ViewModels
 @model BlogIndexViewModel
 
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
 <h1 class="text-center">Posts</h1>
 <hr />
 
@@ -8,34 +10,37 @@
     <ul class="list-group list-group-flush">
         @foreach (Post post in Model.Posts)
         {
-            <li class="list-group-item list-group-item-action border-bottom py-4">
-                <a asp-controller="Blog" asp-action="Posts" asp-route-Id="@post.Id"> 
-                    <div class="li-text">
-                        @post.CreatedDate 
+            <a asp-controller="Blog" asp-action="Posts" asp-route-Id="@post.Id" class="list-group-item list-group-item-action border-bottom">
+                <li class="list-item">
+                        <div class="li-text">
+                            @post.CreatedDate 
 
-                        <br />
-                        <h5>
-                            @post.Title
-                        </h5>
-                    </div>
+                            <br />
 
-                    <img class="li-button my-3" style="width:20px; height:20px;" src="images/right-arrow.png" />
-                    </a>    
-            </li>
+                            <h5>
+                                @post.Title
+                            </h5>
+                        </div>
+
+                <div class="item">
+                <img class="strelka" src="/images/arrow-right-solid.svg">
+
+                </div>
+                </li>
+            </a>
         }
     </ul>
 </div>
 
 <style>
+    .list-group{
+        list-style-type:none;
+    }
+
     .list-group-item {
         position: relative;
         border-style: solid;
         transition: box-shadow 0.3s;
-    }
-
-    /*hover qilinganda strelka ko'rinadi*/
-    .list-group-item:hover .li-button {
-        opacity: 1;
     }
 
     .list-group-item:hover{
@@ -44,12 +49,37 @@
 
     .li-text{
         float: left;
+        padding: 10px 0;
     }
 
-    .li-button {
-        float: right;
-        font-size: 24px;
-        opacity: 0.0;
-        transition: opacity 0.5s;
+    .list-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+
+    .item{
+        position: relative;
+        width: 30px;
+        height: 24px;
+    }
+
+
+    .strelka{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        animation-name: st_move;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .list-group-item .strelka {
+        visibility: hidden;
+    }
+
+    .list-group-item:hover .strelka {
+        visibility: visible;
+    }
+
 </style>

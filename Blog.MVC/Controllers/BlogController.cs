@@ -31,5 +31,10 @@ namespace Blog.MVC.Controllers
             };
             return View(blogPostViewModel);
         }
+
+        public IActionResult CreatePost()
+        {
+            return View();
+        }
     }
 }
