@@ -40,8 +40,13 @@ namespace Blog.MVC.Controllers
         [HttpPost]
         public IActionResult CreatePost(Post post)
         {
-            var newPost = _postRepository.Create(post);
-            return RedirectToAction("posts", new { id = newPost.Id });
+            if(ModelState.IsValid)
+            {
+                var newPost = _postRepository.Create(post);
+                return RedirectToAction("posts", new { id = newPost.Id });
+            }
+
+            return View();
         }
     }
 }
