@@ -1,4 +1,5 @@
 ﻿using Blog.MVC.Models;
+using Blog.MVC.Repository;
 using Blog.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -46,6 +47,29 @@ namespace Blog.MVC.Controllers
                 return RedirectToAction("posts", new { id = newPost.Id });
             }
 
+            return View();
+        }
+
+        public IActionResult DeletePost(int id)
+        {
+            _postRepository.Delete(id);
+            return RedirectToAction("index");
+        }
+
+        public IActionResult UpdatePost(int id)
+        {
+            var post = _postRepository.Get(id);
+            return View(post);
+        }
+
+        [HttpPost]
+        public IActionResult UpdatePost(Post post)
+        {
+            if (ModelState.IsValid)
+            {
+                var newPost = _postRepository.Update(post.Id,post);
+                return RedirectToAction("posts", new { id = newPost.Id });
+            }
             return View();
         }
     }

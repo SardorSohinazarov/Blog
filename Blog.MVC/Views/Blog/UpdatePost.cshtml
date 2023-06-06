@@ -1,0 +1,35 @@
+﻿@model Post
+
+<form asp-controller="Blog" asp-action="UpdatePost" method="post">
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" type="text" class="form-control" placeholder="write any Title for your new post ...">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control" placeholder="write any Description for your new post ..." style="height: 60px"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Content" class="form-label"></label>
+        <textarea asp-for="Content" class="form-control" placeholder="write any main body" style="height: 125px">@Model.Content</textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Author" class="form-label"></label>
+        <input asp-for="Author" type="text" class="form-control" placeholder="Write your full name">
+        <span asp-validation-for="Author" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="AuthorUrl" class="form-label"></label>
+        <input asp-for="AuthorUrl" type="text" class="form-control" placeholder="Write your Linkedin profile">
+        <span asp-validation-for="AuthorUrl" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

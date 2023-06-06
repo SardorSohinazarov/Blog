@@ -1,10 +1,15 @@
-using Blog.MVC.Models;
+using Blog.MVC.Data;
+using Blog.MVC.Repository;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddSingleton<IPostRepository, MockPostRepository>();
+builder.Services.AddScoped<IPostRepository, PostRepository>();
+
+builder.Services.AddDbContext<BlogDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

@@ -1,6 +1,11 @@
 ﻿@using Blog.MVC.ViewModels
 @model BlogPostViewModel
 
+@{
+    var post = Model.Post;
+    Console.WriteLine(post.Title);
+};
+
 <h1 class="text-center">@Model.Post.Title</h1>
 <hr />
 
