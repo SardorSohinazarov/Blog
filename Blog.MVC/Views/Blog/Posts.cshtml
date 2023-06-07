@@ -1,23 +1,65 @@
 ﻿@using Blog.MVC.ViewModels
 @model BlogPostViewModel
 
-@{
-    var post = Model.Post;
-    Console.WriteLine(post.Title);
-};
-
 <h1 class="text-center">@Model.Post.Title</h1>
+    <h6>@Model.Post.CreatedDate</h6>
 <hr />
 
 <div>
-    <h1>@Model.Post.Description</h1>
-    <h1>@Model.Post.Author</h1>
-    <h1>@Model.Post.Views</h1>
-    <h1>@Model.Post.Content</h1>
-    <h1>@Model.Post.CreatedDate</h1>
-    <h1>@Model.Post.AuthorUrl</h1>
+    <p>@Model.Post.Description</p>
+    <p>@Model.Post.Author</p>
+    <p>@Model.Post.Views</p>
+    <p>@Model.Post.Content</p>
+    <p>@Model.Post.AuthorUrl</p>
 </div>
 
-<style>
- 
+<br />
+
+<div class="d-flex justify-content-center">
+    <div class="shadow-box bg-body-tertiary shadow-lg mx-20">
+        <p>
+            <strong class="badge bg-secondary">Obuna bo'ling !</strong>
+        </p>
+        <p class="text-center">
+            Ajoyib malumotlarni mening <a href="https://t.me/professional_mistakemaker">&#64professional_mistakemaker</a>
+            telegram kanalimdan olishingiz mumkin
+        </p>
+    </div>
+</div>
+
+<br />
+
+<section class="mt-5">
+    <div class="container">
+        <div class="row flex-md-row text-center d-flex justify-content-center row">
+            <a asp-controller="Blog" asp-action="Posts" asp-route-id="@Model.PrevId" class="col-md-4 col-4 border-top border-bottom">
+                ← Previous
+            </a>
+            <a asp-controller="Blog" asp-action="Index" class="col-md-4 col-4 border">
+                See More
+            </a>
+            <a asp-controller="Blog" asp-action="Posts" asp-route-id="@Model.PrevId" class="col-md-4 col-4 border-top border-bottom">
+                Next →
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<style>   
+    a{
+        text-decoration: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .panel{
+        padding: 40px;
+        position:relative;
+    }
+
+    .shadow-box {
+        padding: 20px;
+        border-radius: 5px;
+    }
 </style>

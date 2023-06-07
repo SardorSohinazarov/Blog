@@ -1,4 +1,6 @@
 ﻿using Blog.MVC.Models;
+using Blog.MVC.Repository;
+using Blog.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,11 +8,11 @@ namespace Blog.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IPostRepository _postRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IPostRepository postRepository)
         {
-            _logger = logger;
+            _postRepository = postRepository;
         }
 
         public IActionResult Index()
@@ -26,6 +28,17 @@ namespace Blog.MVC.Controllers
         public IActionResult About()
         {
             return View();
+        }
+
+
+        public IActionResult Videos()
+        {
+            BlogIndexViewModel blogPostsViewModel = new BlogIndexViewModel()
+            {
+                Posts = _postRepository.Get()
+            };
+
+            return View(blogPostsViewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

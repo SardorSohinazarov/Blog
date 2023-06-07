@@ -7,8 +7,10 @@ namespace Blog.MVC.Models
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(30,ErrorMessage = "Exceeded maximum length of 30 characters.")]
         [Display(Name = "Title")]
         public string Title { get; set; }
+        [MaxLength(45,ErrorMessage = "Exceeded maximum length of 45 characters.")]
         [Required]
         [Display(Name = "Description")]
         public string Description { get; set; } = string.Empty;

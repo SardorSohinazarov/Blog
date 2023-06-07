@@ -28,8 +28,11 @@ namespace Blog.MVC.Controllers
         {
             BlogPostViewModel blogPostViewModel = new BlogPostViewModel()
             {
-                Post = _postRepository.Get(id ?? 1)
+                Post = _postRepository.Get(id ?? 1),
+                PrevId = 3,
+                NextId = 3
             };
+
             return View(blogPostViewModel);
         }
 

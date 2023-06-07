@@ -1,0 +1,119 @@
+﻿@using Blog.MVC.ViewModels
+@model BlogIndexViewModel
+
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<h1 class="text-center">Videos</h1>
+<hr />
+
+<div class="posts-list row flex-column-reverse flex-md-row">
+    <div class="col-md-6 col-12">
+        <ul class="list-group list-group-flush">
+            @foreach (Post post in Model.Posts)
+            {
+                <a asp-controller="Blog" asp-action="Posts" asp-route-Id="@post.Id" class="list-group-item list-group-item-action border-bottom">
+                <li class="list-item">
+                    <div class="banner-text">
+                        <div class="float-start mx-2">
+                            <img src="/images/video-poster.jpg" class="video-poster rounded" alt="videoPoster">
+                        </div>
+                        <div class="li-text">
+                                @post.CreatedDate
+
+                            <br />
+                          
+                            <h5>
+                                @post.Title
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="item d-flex align-items-center">
+                        <img class="strelka" src="/images/arrow-right-solid.svg">
+                    </div>
+                </li>
+                </a>
+            }
+        </ul>
+    </div>
+    <div class="col-md-4 col-12">
+        <p>
+            <strong class="badge bg-secondary">Obuna bo'ling !</strong>
+        </p>
+        <p class="text-center">
+            Ajoyib malumotlarni mening <a href="https://t.me/professional_mistakemaker">&#64professional_mistakemaker</a>
+            telegram kanalimdan olishingiz mumkin
+        </p>
+    </div>
+</div>
+
+<style>
+    .video-poster{
+        height: 80px;
+    }
+
+    .posts-list {
+        justify-content: space-evenly;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .list-group {
+        list-style-type: none;
+    }
+
+    .list-group-item {
+        position: relative;
+        border-style: solid;
+        transition: box-shadow 0.3s;
+    }
+
+    .list-group-item:hover {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .banner-text{
+        float: left; 
+        position: relative;
+    }
+
+    .li-text {
+        position: relative;
+        float: left;
+        padding: 10px 0;
+    }
+
+    .item {
+        position: relative;
+        width: 30px;
+        height: 24px;
+        float: inline-end;
+    }
+
+    .list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .strelka {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        animation-name: st_move;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .list-group-item .strelka {
+        visibility: hidden;
+        float: right;
+    }
+
+    .list-group-item:hover .strelka {
+        visibility: visible;
+    }
+
+</style>
