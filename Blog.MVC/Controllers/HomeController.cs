@@ -9,10 +9,14 @@ namespace Blog.MVC.Controllers
     public class HomeController : Controller
     {
         private readonly IPostRepository _postRepository;
+        private readonly IVideoRepository _videoRepository;
 
-        public HomeController(IPostRepository postRepository)
+        public HomeController(
+            IPostRepository postRepository, 
+            IVideoRepository videoRepository)
         {
             _postRepository = postRepository;
+            _videoRepository = videoRepository;
         }
 
         public IActionResult Index()
@@ -33,12 +37,12 @@ namespace Blog.MVC.Controllers
 
         public IActionResult Videos()
         {
-            BlogIndexViewModel blogPostsViewModel = new BlogIndexViewModel()
+            HomeVideosViewModel homeVideosViewModel = new HomeVideosViewModel()
             {
-                Posts = _postRepository.Get()
+                Videos = _videoRepository.Get()
             };
 
-            return View(blogPostsViewModel);
+            return View(homeVideosViewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

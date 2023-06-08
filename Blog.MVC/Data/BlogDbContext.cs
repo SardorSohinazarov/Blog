@@ -10,5 +10,6 @@ namespace Blog.MVC.Data
         {}
 
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Video> Videos { get; set; }
     }
 }

@@ -1,10 +1,9 @@
-﻿namespace Blog.MVC.ViewModels
+﻿using Blog.MVC.Models;
+
+namespace Blog.MVC.ViewModels
 {
     public class HomeVideosViewModel
     {
-        public string CreatedDate { get; set; }
-        public string Title { get; set;}
-        public string PictureLink { get; set;}
-        public string VideoLink { get; set;}
+        public List<Video> Videos { get; set; }
     }
 }

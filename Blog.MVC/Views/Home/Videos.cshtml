@@ -1,5 +1,5 @@
 ﻿@using Blog.MVC.ViewModels
-@model BlogIndexViewModel
+@model HomeVideosViewModel
 
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
@@ -9,22 +9,21 @@
 <div class="posts-list row flex-column-reverse flex-md-row">
     <div class="col-md-6 col-12">
         <ul class="list-group list-group-flush">
-            @foreach (Post post in Model.Posts)
+            @foreach (Video video in Model.Videos)
             {
-                <a asp-controller="Blog" asp-action="Posts" asp-route-Id="@post.Id" class="list-group-item list-group-item-action border-bottom">
+                <a href=@video.VideoLink class="list-group-item list-group-item-action border-bottom">
                 <li class="list-item">
                     <div class="banner-text">
                         <div class="float-start mx-2">
-                            <img src="/images/video-poster.jpg" class="video-poster rounded" alt="videoPoster">
+                            <img src=@video.PictureLink class="video-poster rounded" alt="videoPoster">
                         </div>
                         <div class="li-text">
-                                @post.CreatedDate
-
+                                @video.CreatedDate
                             <br />
                           
-                            <h5>
-                                @post.Title
-                            </h5>
+                            <h6>
+                                @video.Title
+                            </h6>
                         </div>
                     </div>
 
