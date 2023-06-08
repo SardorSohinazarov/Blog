@@ -34,6 +34,83 @@ body {
     }
 }
 
+@media (max-width: 575.98px) {
+    .goldmen img {
+        width: 80%;
+    }
+
+    .all-medalists img {
+        width: 80%;
+    }
+
+    .pdp img {
+        width: 80%;
+    }
+}
+
+/* Mobile devices */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .goldmen img {
+        width: 80%;
+    }
+
+    .all-medalists img {
+        width: 80%;
+    }
+
+    .pdp img {
+        width: 80%;
+    }
+}
+
+/* Large mobile devices */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .goldmen img {
+        .goldmen img
+
+{
+    width: 80%;
+}
+
+.all-medalists img {
+    width: 80%;
+}
+
+.pdp img {
+    width: 80%;
+}
+}
+
+/* Portrait mode tablets */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
+    .goldmen img {
+        width: 80%;
+    }
+
+    .all-medalists img {
+        width: 80%;
+    }
+
+    .pdp img {
+        width: 80%;
+    }
+}
+
+/* Landscape mode tablets */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: landscape) {
+    .goldmen img {
+        width: 80%;
+    }
+
+    .all-medalists img {
+        width: 80%;
+    }
+
+    .pdp img {
+        width: 80%;
+    }
+}
+
 @media (min-width: 1400px) {
     .container{
         max-width: 1140px;
@@ -45,6 +122,25 @@ body {
 
     .content{
         max-width: 60%;
+    }
+
+    .about-page{
+        max-width: 60%;
+    }
+
+    .goldmen {
+        height: 500px;
+        width: auto;
+    }
+
+    .all-medalists {
+        height: 500px;
+        width:auto;
+    }
+
+    .pdp {
+        height: 500px;
+        width:auto;
     }
 }
 

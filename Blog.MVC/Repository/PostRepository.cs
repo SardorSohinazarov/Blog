@@ -29,6 +29,8 @@ namespace Blog.MVC.Repository
         public Post Get(int id)
         {
             var post = _dbContext.Posts.FirstOrDefault(x => x.Id == id);
+            post.Views += 1;
+            _dbContext.SaveChanges();
             return post;
         }
 

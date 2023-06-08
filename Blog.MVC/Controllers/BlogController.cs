@@ -26,11 +26,36 @@ namespace Blog.MVC.Controllers
 
         public IActionResult Posts(int? id)
         {
+            var ids = _postRepository.Get().Select(x => x.Id).ToList();
+
+            var prev = 0;
+            var next = 0;
+
+            if(id == ids[0])
+            {
+                prev = ids[0];
+            }
+            else
+            {
+                prev = ids.Where(x => ids.IndexOf(x) + 1 == ids.IndexOf(id??1) && ids.IndexOf(x) + 1 < ids.Count).First();
+            }
+
+            if(id == ids[ids.Count-1])
+            {
+                next = ids[ids.Count-1];
+            }
+            else
+            {
+                next = ids.Where(x => ids.IndexOf(x) - 1 == ids.IndexOf(id??1) && ids.IndexOf(x) - 1 >= 0).First();
+            }
+
+            
+
             BlogPostViewModel blogPostViewModel = new BlogPostViewModel()
             {
+                PrevId = prev,
                 Post = _postRepository.Get(id ?? 1),
-                PrevId = 3,
-                NextId = 3
+                NextId = next
             };
 
             return View(blogPostViewModel);
