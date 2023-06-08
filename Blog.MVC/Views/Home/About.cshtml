@@ -2,9 +2,8 @@
     ViewData["Title"] = "About me";
 }
 
+<h1>@ViewData["Title"]</h1>
 <div class="about-page">
-    <h1>@ViewData["Title"]</h1>
-
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
@@ -13,7 +12,9 @@
                 </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                <div class="accordion-body">
+                    Men Sohinazarov Sardor 2003-yil 20-fevralda Farg'ona viloyati tug'ulganman va hozirda universitetda(TATU) o'qiyman 
+                </div>
             </div>
         </div>
         <div class="accordion-item">
@@ -25,7 +26,9 @@
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                     <h3>#litsey</h3>
-                    Men tumanimizdagi 49-boshlang'ich umumta'lim maktabidan 2014-yili 2-VIDUMI ga qabul qilinganman va shu yerda 2021-yilgacha o'qidim. Ko'plab do'stlar va ajoyib ustozlar bilan birgalikda viloyat va respublika miqyosidagi fan olimpiadalarida yuqori natijalarni qo'lga kiritdik. 
+                    <p>
+                        Men tumanimizdagi 49-boshlang'ich umumta'lim maktabidan 2014-yili 2-VIDUMI ga qabul qilinganman va shu yerda 2021-yilgacha o'qidim. Ko'plab do'stlar va ajoyib ustozlar bilan birgalikda viloyat va respublika miqyosidagi fan olimpiadalarida yuqori natijalarni qo'lga kiritdik.
+                    </p>
                     <br />
                     <br />
                     <div class="block-of-pictures d-flex justify-content-center">
@@ -42,12 +45,15 @@
 
                     <br />
                     <h3>#university</h3>
-                    2021-yili esa <a href="https://tuit.uz/">Toshkent Axborot Texnologiyalari universiteti</a>ning Dasturiy injiniring fakultetiga davlat granti asosida o'qishga qabul qilindim va Dasturlash haqidagi dastlabki tushunchalarga ega bo'ldim :)
+                    <p>
+                        2021-yili esa <a href="https://tuit.uz/">Toshkent Axborot Texnologiyalari universiteti</a>ning Dasturiy injiniring fakultetiga davlat granti asosida o'qishga qabul qilindim va Dasturlash haqidagi dastlabki tushunchalarga ega bo'ldim :)
+                    </p>
                     <code class="badge bg-secondary">Hello World!</code>
                     <br />
                     <br />
                     <h3>#pdp</h3>
-                    Ikkinchi kursdan boshlab har xil kurslarga bordim va hayotimni o'zgartirgan joylardan biri <a href="https://online.pdp.uz/">Pdp Academy</a> bo'ldi.
+                    Ikkinchi kursdan boshlab har xil kurslarga bordim va hayotimni o'zgartirgan joylardan biri <a href="https://online.pdp.uz/">PDP Academy</a> bo'ldi.PDP da Ingliz tili va Dasturlash bo'yicha bilimlar oldim.
+                    <br />
                     <br />
                     <div class="pdp d-flex justify-content-center">
                         <img class="rounded border-1" src="~/images/pdp.jpg" />
@@ -62,13 +68,27 @@
                 </button>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div class="accordion-body">
+                    Avvaliga <a href="https://www.linkedin.com/in/elbekdeveloper/">Elbek Normurodov</a> tashkil qilgan <a href="https://github.com/hassanhabib/The-Standard-Uzbek">Standart arxitektura</a>ga yo'naltirilgan kursida o'qish davomida <a href="https://github.com/ElbekDeveloper/CashOverflow">CashOverflow</a> nomli backend dasturini Standart arxitektura asosida qurdik, keyinchalik Tarteeb jamosiga qo'shilib <a href="https://github.com/ElbekDeveloper/Tarteeb">Tarteeb</a> va <a href="https://t.me/TasweerAI_bot">TasweerAI_bot</a> projectlarida ishladim.
+                    <br />
+                    <br />
+                    Vaqt o'tishi bilan <a href="https://www.kdb.uz/uz">KDB bank</a>da Backend Developer sifatida ishlay boshladim.
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <style>
+    .backme{
+        float: right;
+    }
+
+
+    .backme img{
+        max-width: 500px;
+    }
+
     a{
         text-decoration: none;
     }
