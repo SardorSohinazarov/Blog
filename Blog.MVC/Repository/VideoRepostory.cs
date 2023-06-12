@@ -12,25 +12,10 @@ namespace Blog.MVC.Repository
             _blogDbContext = blogDbContext;
         }
 
-        public Video Create(Video video)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Video Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Video> Get()
         {
-            var videos =  _blogDbContext.Videos.ToList();
+            var videos = _blogDbContext.Videos.ToList();
             return videos.Reverse<Video>().ToList();
-        }
-
-        public Video Update(int id, Video video)
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -1,0 +1,112 @@
+[
+  {
+    "Id": 3,
+    "Title": "Sardor",
+    "Description": "Sardor",
+    "Content": "Sardor",
+    "Author": "Sardor",
+    "AuthorUrl": "https://www.linkedin.com/in/abbosbeck/",
+    "CreatedDate": "06 June, 2023",
+    "Views": 160
+  },
+  {
+    "Id": 4,
+    "Title": "Title",
+    "Description": "Description",
+    "Content": "Content",
+    "Author": "Author",
+    "AuthorUrl": "https://www.linkedin.com/in/abbosbeck/",
+    "CreatedDate": "06 June, 2023",
+    "Views": 18
+  },
+  {
+    "Id": 6,
+    "Title": "New Post Title",
+    "Description": "New Description",
+    "Content": "New Main Content",
+    "Author": "Sardor",
+    "AuthorUrl": "https://www.linkedin.com/in/sardorsohinazarov/",
+    "CreatedDate": "07 June, 2023",
+    "Views": 21
+  },
+  {
+    "Id": 7,
+    "Title": "What is Lorem Ipsum? ",
+    "Description": " Lorem Ipsum",
+    "Content": "What is Lorem Ipsum?\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\u0027s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "Author": "Sardor",
+    "AuthorUrl": "https://www.linkedin.com/in/sardorsohinazarov/",
+    "CreatedDate": "07 June, 2023",
+    "Views": 22
+  },
+  {
+    "Id": 8,
+    "Title": "Lorem2",
+    "Description": "Lorem Description",
+    "Content": "What is Lorem Ipsum?\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\u0027s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "Author": "Sardor",
+    "AuthorUrl": "https://www.linkedin.com/in/sardorsohinazarov/",
+    "CreatedDate": "07 June, 2023",
+    "Views": 12
+  },
+  {
+    "Id": 9,
+    "Title": "Lorem 3",
+    "Description": "Lorem Description",
+    "Content": "What is Lorem Ipsum?\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\u0027s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "Author": "Sardor",
+    "AuthorUrl": "https://www.linkedin.com/in/sardorsohinazarov/",
+    "CreatedDate": "07 June, 2023",
+    "Views": 10
+  },
+  {
+    "Id": 10,
+    "Title": "how can change navbar moving\u0027",
+    "Description": "how can change navbar moving\u0027",
+    "Content": "how can change navbar moving\u0027",
+    "Author": "how can change navbar moving\u0027",
+    "AuthorUrl": "https://www.linkedin.com/in/sardorsohinazarov/",
+    "CreatedDate": "07 June, 2023",
+    "Views": 7
+  },
+  {
+    "Id": 11,
+    "Title": "how can change navbar moving\u0027",
+    "Description": "how can change navbar moving\u0027",
+    "Content": "how can change navbar moving\u0027",
+    "Author": "how can change navbar moving\u0027",
+    "AuthorUrl": "https://www.linkedin.com/in/sardorsohinazarov/",
+    "CreatedDate": "07 June, 2023",
+    "Views": 7
+  },
+  {
+    "Id": 20,
+    "Title": "Sardor",
+    "Description": "lksjdffffffffffffffffffffffffffffffffff",
+    "Content": "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+    "Author": "kd",
+    "AuthorUrl": "https://www.linkedin.com/in/sardorsohinazarov/",
+    "CreatedDate": "08 June, 2023",
+    "Views": 31
+  },
+  {
+    "Id": 21,
+    "Title": "New Title",
+    "Description": "s",
+    "Content": "Qalesiz?\r\n\r\nSardor Sohinazarov Daxshat\r\n\r\nbola",
+    "Author": "Sardor",
+    "AuthorUrl": "https://www.linkedin.com/in/sardorsohinazarov/",
+    "CreatedDate": "08 June, 2023",
+    "Views": 10
+  },
+  {
+    "Id": 22,
+    "Title": "Yangi Post",
+    "Description": "s",
+    "Content": "Bu sayt shaxsiy portfolio sayt bo\u0027lib responsive , dark mode bor , va ajoyib shunchaki",
+    "Author": "Sardor",
+    "AuthorUrl": "https://www.linkedin.com/in/sardorsohinazarov/",
+    "CreatedDate": "08 June, 2023",
+    "Views": 24
+  }
+]
