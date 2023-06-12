@@ -1,16 +1,17 @@
-using Blog.MVC.Data;
 using Blog.MVC.Repository;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IPostRepository, PostRepository>();
-builder.Services.AddScoped<IVideoRepository, VideoRepository>();
+builder.Services.AddScoped<IPostRepository, PostFileRepository>();
+builder.Services.AddScoped<IVideoRepository, VideoFileRepository>();
 
-builder.Services.AddDbContext<BlogDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+/*builder.Services.AddScoped<IPostRepository, PostRepository>();
+builder.Services.AddScoped<IVideoRepository, VideoRepository>();*/
+
+/*builder.Services.AddDbContext<BlogDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));*/
 
 var app = builder.Build();
 
